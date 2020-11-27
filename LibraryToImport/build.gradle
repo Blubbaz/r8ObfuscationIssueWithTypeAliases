@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+buildscript {
+    ext.gradlePluginVersion = "4.1.1"
+    ext.r8Version = "3.0.7-dev"
+    ext.proguardVersion = "6.2.2"
+    ext.kotlin_version = "1.4.20"
+
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://storage.googleapis.com/r8-releases/raw'
+        }
+
+    }
+    dependencies {
+        // classpath "com.android.tools:r8:$r8Version"
+        // classpath "net.sf.proguard:proguard-gradle:$proguardVersion"
+        classpath "com.android.tools.build:gradle:$gradlePluginVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
