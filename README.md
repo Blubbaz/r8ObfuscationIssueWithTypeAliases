@@ -48,6 +48,9 @@ This project contains the classes which are imprted it contains three classes `S
 ### Broken extension class not importable in Java
 ![KT class not found in Java](images/KTclass_with_extension_not_found_in_java.png)
 
+### Broken extension class not suggested in Java
+![KT class not suggested in Java](images/KTclass_not_suggested_in_java.png)
+
 ### Broken extension class available in the aar
 ![KT class in the aar](images/KTclass_in_aar.png)
 
