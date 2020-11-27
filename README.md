@@ -41,7 +41,15 @@ For all files except the `gradlePlugin4.1.1_proguard_6.2.2.aar` the `ImportingJa
 This project contains the classes which are imprted it contains three classes `SomeClass`,  `SomeClassWithGenerics` which's type aliases and extensions are in the same file like the class and a `SomeClassWithGenericsTypeAliasesOtherFile` which's type aliases are put into a separate file.
 
 ## Images
+
+### Broken extension function not suggested in Kotlin
 ![Extension function not found in Kotlin](images/extension_function_not_found_in_kotlin.png)
+
+### Broken extension class not importable in Java
 ![KT class not found in Java](images/KTclass_with_extension_not_found_in_java.png)
+
+### Broken extension class available in the aar
 ![KT class in the aar](images/KTclass_in_aar.png)
+
+### Broken extension class can be imported and used when the aar is obfuscated with proguard instead of R8
 ![KT class found when aar is obfuscated with Proguard](images/KTclass_with_extension_not_found_in_java_with_proguard_obfuscated.png)
