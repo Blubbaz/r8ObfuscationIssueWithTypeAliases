@@ -1,8 +1,8 @@
 # r8KotlinTypeAliasesObfuscationIssue
-R8 has currently issues with obfuscation of files containing type aliases - This is sample repo to reproduce the issue
+R8 has currently issues with obfuscation of files containing type aliases - This is sample repo to show the issue
 
 R8 has issues obfusctating extension files when there are  type aliases with generics defined in the same file.
-When either **R8 is disabled** or the **type aliases are moved to a separate file**, everything works wine.
+When either **R8 is disabled** or the **type aliases are moved to a separate file**, everything works fine.
 
 This repository shows the issue in a reproducable way.
 
